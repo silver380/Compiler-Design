@@ -60,13 +60,13 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
         printf("TOKEN_INT_CONST\n");
     }
 }
-["][LETTER]["] {
+["]({LETTER})*["] {
     printf("TOKEN_CHAR_CONST\n");
 }
 "#".* {
     printf("ONE_LINE_COMMENT\n");
 }
-"#!"[.|{L}]*"!#" {
+"#!"(.*{L})*.*"!#" {
     printf("MULTI_LINE_COMMENT\n");
 }
 "<" {
