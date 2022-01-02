@@ -16,133 +16,133 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 
 %%
 "int" {
-    printf("TOKEN_INT\n");
+    fprintf(yyout, "TOKEN_INT\n");
 }
 "char" {
-    printf("TOKEN_CHAR\n");
+    fprintf(yyout, "TOKEN_CHAR\n");
 }
 "if" {
-    printf("TOKEN_IF\n");
+    fprintf(yyout, "TOKEN_IF\n");
 }
 "else" {
-    printf("TOKEN_ELSE\n");
+    fprintf(yyout,"TOKEN_ELSE\n");
 }
 "elseif" {
-    printf("TOKEN_ELSEIF\n");
+    fprintf(yyout,"TOKEN_ELSEIF\n");
 }
 "while" {
-    printf("TOKEN_WHILE\n");
+    fprintf(yyout,"TOKEN_WHILE\n");
 }
 "for" {
-    printf("TOKEN_FOR\n");
+    fprintf(yyout,"TOKEN_FOR\n");
 }
 "return" {
-    printf("TOEKN_RETURN\n");
+   fprintf(yyout,"TOEKN_RETURN\n");
 }
 "void" {
-    printf("TOKEN_VOID\n");
+    fprintf(yyout,"TOKEN_VOID\n");
 }
 "main" {
-    printf("TOKEN_MAIN\n");
+    fprintf(yyout,"TOKEN_MAIN\n");
 }
 "continue" {
-    printf("TOKEN_CONTINUE\n");
+    fprintf(yyout,"TOKEN_CONTINUE\n");
 }
 "break" {
-    printf("TOKEN_BREAK\n");
+    fprintf(yyout,"TOKEN_BREAK\n");
 }
 {ID}+ {
-    printf("TOKEN_IDENTIFIER\n");
+    fprintf(yyout,"TOKEN_IDENTIFIER\n");
 }
 -{0,1}[1-9]{DIGIT}* {
     int num = atoi(yytext);
     if ( num <= 32767 && num >= -32768){
-        printf("TOKEN_INT_CONST\n");
+       fprintf(yyout,"TOKEN_INT_CONST\n");
     }
 }
 ["]({LETTER})*["] {
-    printf("TOKEN_CHAR_CONST\n");
+    fprintf(yyout,"TOKEN_CHAR_CONST\n");
 }
 "#".* {
-    printf("ONE_LINE_COMMENT\n");
+    fprintf(yyout,"ONE_LINE_COMMENT\n");
 }
 "#!"(.*{L})*.*"!#" {
-    printf("MULTI_LINE_COMMENT\n");
+   fprintf(yyout,"MULTI_LINE_COMMENT\n");
 }
 "<" {
-    printf("TOKEN_LESS\n");
+    fprintf(yyout,"TOKEN_LESS\n");
 }
 "<=" {
-    printf("TOKEN_LESS_EQUAL\n");
+    fprintf(yyout,"TOKEN_LESS_EQUAL\n");
 }
 "==" {
-    printf("TOKEN_EQUAL\n");
+    fprintf(yyout,"TOKEN_EQUAL\n");
 }
 "!=" {
-    printf("TOKEN_NOT_EQUAL\n");
+    fprintf(yyout,"TOKEN_NOT_EQUAL\n");
 }
 ">" {
-    printf("TOKEN_GREATER\n");
+    fprintf(yyout,"TOKEN_GREATER\n");
 }
 ">=" {
-    printf("TOKEN_GREATER_EQUAL\n");
+    fprintf(yyout,"TOKEN_GREATER_EQUAL\n");
 }
 "|" {
-    printf("TOKEN_BITWISE_OR\n");
+    fprintf(yyout,"TOKEN_BITWISE_OR\n");
 }
 "&" {
-    printf("TOKEN_BITWISE_AND\n");
+    fprintf(yyout,"TOKEN_BITWISE_AND\n");
 }
 "||" {
-    printf("TOKEN_OR\n");
+   fprintf(yyout,"TOKEN_OR\n");
 }
 "&&" {
-    printf("TOKEN_AND\n");
+    fprintf(yyout,"TOKEN_AND\n");
 }
 "^" {
-    printf("TOKEN_BITWISE_XOR\n");
+    fprintf(yyout,"TOKEN_BITWISE_XOR\n");
 }
 "!" {
-    printf("TOKEN_NOT\n");
+    fprintf(yyout,"TOKEN_NOT\n");
 }
 "+" {
-    printf("TOKEN_PLUS\n");
+    fprintf(yyout,"TOKEN_PLUS\n");
 }
 "-" {
-    printf("TOKEN_MINUS\n");
+    fprintf(yyout,"TOKEN_MINUS\n");
 }
 "/" {
-    printf("TOKEN_DIVISION\n");
+    fprintf(yyout,"TOKEN_DIVISION\n");
 }
 "*" {
-    printf("TOKEN_MULTIPLY\n");
+    fprintf(yyout,"TOKEN_MULTIPLY\n");
 }
 "=" {
-    printf("TOKEN_ASSIGN\n");
+    fprintf(yyout,"TOKEN_ASSIGN\n");
 }
 "(" {
-    printf("TOKEN_LEFTPAREN\n");
+    fprintf(yyout,"TOKEN_LEFTPAREN\n");
 }
 ")" {
-    printf("TOKEN_RIGHTPAREN\n");
+    fprintf(yyout,"TOKEN_RIGHTPAREN\n");
 }
 "[" {
-    printf("TOKEN_LEFTBRACKET\n");
+    fprintf(yyout,"TOKEN_LEFTBRACKET\n");
 }
 "]" {
-    printf("TOKEN_RIGHTBRACKET\n");
+    fprintf(yyout,"TOKEN_RIGHTBRACKET\n");
 }
 "{" {
-    printf("TOKEN_LEFTB\n");
+    fprintf(yyout,"TOKEN_LEFTB\n");
 }
 "}" {
-    printf("TOKEN_RIGHTB\n");
+    fprintf(yyout,"TOKEN_RIGHTB\n");
 }
 "," {
-    printf("TOKEN_COMMA\n");
+    fprintf(yyout,"TOKEN_COMMA\n");
 }
 "." {
-    printf("TOKEN_DOT\n");
+    fprintf(yyout,"TOKEN_DOT\n");
 }
 .|{L} {
 
@@ -156,8 +156,10 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 
 int main(){
 
-    FILE* f = fopen("test_case.txt","r");
-    yyin = f;
+    FILE* input_file = fopen("test_case.txt","r");
+    FILE* output_file = fopen("Phase1_Token.txt", "w");
+    yyin = input_file;
+    yyout = output_file;
     yylex();
     return 0;
 }

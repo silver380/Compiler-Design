@@ -816,91 +816,91 @@ case 1:
 YY_RULE_SETUP
 #line 18 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_INT\n");
+    fprintf(yyout, "TOKEN_INT\n");
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 21 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_CHAR\n");
+    fprintf(yyout, "TOKEN_CHAR\n");
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 24 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_IF\n");
+    fprintf(yyout, "TOKEN_IF\n");
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 27 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_ELSE\n");
+    fprintf(yyout,"TOKEN_ELSE\n");
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 30 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_ELSEIF\n");
+    fprintf(yyout,"TOKEN_ELSEIF\n");
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 33 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_WHILE\n");
+    fprintf(yyout,"TOKEN_WHILE\n");
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 36 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_FOR\n");
+    fprintf(yyout,"TOKEN_FOR\n");
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 39 "Lexical_Analyzer.l"
 {
-    printf("TOEKN_RETURN\n");
+   fprintf(yyout,"TOEKN_RETURN\n");
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 42 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_VOID\n");
+    fprintf(yyout,"TOKEN_VOID\n");
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 45 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_MAIN\n");
+    fprintf(yyout,"TOKEN_MAIN\n");
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 48 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_CONTINUE\n");
+    fprintf(yyout,"TOKEN_CONTINUE\n");
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 51 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_BREAK\n");
+    fprintf(yyout,"TOKEN_BREAK\n");
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 54 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_IDENTIFIER\n");
+    fprintf(yyout,"TOKEN_IDENTIFIER\n");
 }
 	YY_BREAK
 case 14:
@@ -909,7 +909,7 @@ YY_RULE_SETUP
 {
     int num = atoi(yytext);
     if ( num <= 32767 && num >= -32768){
-        printf("TOKEN_INT_CONST\n");
+       fprintf(yyout,"TOKEN_INT_CONST\n");
     }
 }
 	YY_BREAK
@@ -917,14 +917,14 @@ case 15:
 YY_RULE_SETUP
 #line 63 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_CHAR_CONST\n");
+    fprintf(yyout,"TOKEN_CHAR_CONST\n");
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 66 "Lexical_Analyzer.l"
 {
-    printf("ONE_LINE_COMMENT\n");
+    fprintf(yyout,"ONE_LINE_COMMENT\n");
 }
 	YY_BREAK
 case 17:
@@ -932,182 +932,182 @@ case 17:
 YY_RULE_SETUP
 #line 69 "Lexical_Analyzer.l"
 {
-    printf("MULTI_LINE_COMMENT\n");
+   fprintf(yyout,"MULTI_LINE_COMMENT\n");
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 72 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_LESS\n");
+    fprintf(yyout,"TOKEN_LESS\n");
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 75 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_LESS_EQUAL\n");
+    fprintf(yyout,"TOKEN_LESS_EQUAL\n");
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 78 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_EQUAL\n");
+    fprintf(yyout,"TOKEN_EQUAL\n");
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
 #line 81 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_NOT_EQUAL\n");
+    fprintf(yyout,"TOKEN_NOT_EQUAL\n");
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 84 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_GREATER\n");
+    fprintf(yyout,"TOKEN_GREATER\n");
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 87 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_GREATER_EQUAL\n");
+    fprintf(yyout,"TOKEN_GREATER_EQUAL\n");
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
 #line 90 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_BITWISE_OR\n");
+    fprintf(yyout,"TOKEN_BITWISE_OR\n");
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
 #line 93 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_BITWISE_AND\n");
+    fprintf(yyout,"TOKEN_BITWISE_AND\n");
 }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
 #line 96 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_OR\n");
+   fprintf(yyout,"TOKEN_OR\n");
 }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
 #line 99 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_AND\n");
+    fprintf(yyout,"TOKEN_AND\n");
 }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
 #line 102 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_BITWISE_XOR\n");
+    fprintf(yyout,"TOKEN_BITWISE_XOR\n");
 }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
 #line 105 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_NOT\n");
+    fprintf(yyout,"TOKEN_NOT\n");
 }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
 #line 108 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_PLUS\n");
+    fprintf(yyout,"TOKEN_PLUS\n");
 }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
 #line 111 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_MINUS\n");
+    fprintf(yyout,"TOKEN_MINUS\n");
 }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
 #line 114 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_DIVISION\n");
+    fprintf(yyout,"TOKEN_DIVISION\n");
 }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
 #line 117 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_MULTIPLY\n");
+    fprintf(yyout,"TOKEN_MULTIPLY\n");
 }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
 #line 120 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_ASSIGN\n");
+    fprintf(yyout,"TOKEN_ASSIGN\n");
 }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
 #line 123 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_LEFTPAREN\n");
+    fprintf(yyout,"TOKEN_LEFTPAREN\n");
 }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
 #line 126 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_RIGHTPAREN\n");
+    fprintf(yyout,"TOKEN_RIGHTPAREN\n");
 }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
 #line 129 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_LEFTBRACKET\n");
+    fprintf(yyout,"TOKEN_LEFTBRACKET\n");
 }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
 #line 132 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_RIGHTBRACKET\n");
+    fprintf(yyout,"TOKEN_RIGHTBRACKET\n");
 }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
 #line 135 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_LEFTB\n");
+    fprintf(yyout,"TOKEN_LEFTB\n");
 }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
 #line 138 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_RIGHTB\n");
+    fprintf(yyout,"TOKEN_RIGHTB\n");
 }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
 #line 141 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_COMMA\n");
+    fprintf(yyout,"TOKEN_COMMA\n");
 }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
 #line 144 "Lexical_Analyzer.l"
 {
-    printf("TOKEN_DOT\n");
+    fprintf(yyout,"TOKEN_DOT\n");
 }
 	YY_BREAK
 case 43:
@@ -2133,8 +2133,10 @@ void yyfree (void * ptr )
 
 int main(){
 
-    FILE* f = fopen("test_case.txt","r");
-    yyin = f;
+    FILE* input_file = fopen("test_case.txt","r");
+    FILE* output_file = fopen("Phase1_Token.txt", "w");
+    yyin = input_file;
+    yyout = output_file;
     yylex();
     return 0;
 }
