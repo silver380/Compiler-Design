@@ -527,9 +527,9 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "test.l"
+#line 1 "Lexical_Analyzer.l"
 /*Definition Section*/
-#line 4 "test.l"
+#line 4 "Lexical_Analyzer.l"
     #include <stdio.h>
     #include <math.h>
     #include <stdlib.h>
@@ -753,7 +753,7 @@ YY_DECL
 		}
 
 	{
-#line 17 "test.l"
+#line 17 "Lexical_Analyzer.l"
 
 #line 759 "lex.yy.c"
 
@@ -814,98 +814,98 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 "test.l"
+#line 18 "Lexical_Analyzer.l"
 {
     printf("TOKEN_INT\n");
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 21 "test.l"
+#line 21 "Lexical_Analyzer.l"
 {
     printf("TOKEN_CHAR\n");
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 24 "test.l"
+#line 24 "Lexical_Analyzer.l"
 {
     printf("TOKEN_IF\n");
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 27 "test.l"
+#line 27 "Lexical_Analyzer.l"
 {
     printf("TOKEN_ELSE\n");
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 30 "test.l"
+#line 30 "Lexical_Analyzer.l"
 {
     printf("TOKEN_ELSEIF\n");
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 33 "test.l"
+#line 33 "Lexical_Analyzer.l"
 {
     printf("TOKEN_WHILE\n");
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 36 "test.l"
+#line 36 "Lexical_Analyzer.l"
 {
     printf("TOKEN_FOR\n");
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 39 "test.l"
+#line 39 "Lexical_Analyzer.l"
 {
     printf("TOEKN_RETURN\n");
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 42 "test.l"
+#line 42 "Lexical_Analyzer.l"
 {
     printf("TOKEN_VOID\n");
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 45 "test.l"
+#line 45 "Lexical_Analyzer.l"
 {
     printf("TOKEN_MAIN\n");
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 48 "test.l"
+#line 48 "Lexical_Analyzer.l"
 {
     printf("TOKEN_CONTINUE\n");
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 51 "test.l"
+#line 51 "Lexical_Analyzer.l"
 {
     printf("TOKEN_BREAK\n");
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 54 "test.l"
+#line 54 "Lexical_Analyzer.l"
 {
     printf("TOKEN_IDENTIFIER\n");
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 57 "test.l"
+#line 57 "Lexical_Analyzer.l"
 {
     int num = atoi(yytext);
     if ( num <= 32767 && num >= -32768){
@@ -915,14 +915,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 63 "test.l"
+#line 63 "Lexical_Analyzer.l"
 {
     printf("TOKEN_CHAR_CONST\n");
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 66 "test.l"
+#line 66 "Lexical_Analyzer.l"
 {
     printf("ONE_LINE_COMMENT\n");
 }
@@ -930,182 +930,182 @@ YY_RULE_SETUP
 case 17:
 /* rule 17 can match eol */
 YY_RULE_SETUP
-#line 69 "test.l"
+#line 69 "Lexical_Analyzer.l"
 {
     printf("MULTI_LINE_COMMENT\n");
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 72 "test.l"
+#line 72 "Lexical_Analyzer.l"
 {
     printf("TOKEN_LESS\n");
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 75 "test.l"
+#line 75 "Lexical_Analyzer.l"
 {
     printf("TOKEN_LESS_EQUAL\n");
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 78 "test.l"
+#line 78 "Lexical_Analyzer.l"
 {
     printf("TOKEN_EQUAL\n");
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 81 "test.l"
+#line 81 "Lexical_Analyzer.l"
 {
     printf("TOKEN_NOT_EQUAL\n");
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 84 "test.l"
+#line 84 "Lexical_Analyzer.l"
 {
     printf("TOKEN_GREATER\n");
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 87 "test.l"
+#line 87 "Lexical_Analyzer.l"
 {
     printf("TOKEN_GREATER_EQUAL\n");
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 90 "test.l"
+#line 90 "Lexical_Analyzer.l"
 {
     printf("TOKEN_BITWISE_OR\n");
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 93 "test.l"
+#line 93 "Lexical_Analyzer.l"
 {
     printf("TOKEN_BITWISE_AND\n");
 }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 96 "test.l"
+#line 96 "Lexical_Analyzer.l"
 {
     printf("TOKEN_OR\n");
 }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 99 "test.l"
+#line 99 "Lexical_Analyzer.l"
 {
     printf("TOKEN_AND\n");
 }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 102 "test.l"
+#line 102 "Lexical_Analyzer.l"
 {
     printf("TOKEN_BITWISE_XOR\n");
 }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 105 "test.l"
+#line 105 "Lexical_Analyzer.l"
 {
     printf("TOKEN_NOT\n");
 }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 108 "test.l"
+#line 108 "Lexical_Analyzer.l"
 {
     printf("TOKEN_PLUS\n");
 }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 111 "test.l"
+#line 111 "Lexical_Analyzer.l"
 {
     printf("TOKEN_MINUS\n");
 }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 114 "test.l"
+#line 114 "Lexical_Analyzer.l"
 {
     printf("TOKEN_DIVISION\n");
 }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 117 "test.l"
+#line 117 "Lexical_Analyzer.l"
 {
     printf("TOKEN_MULTIPLY\n");
 }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 120 "test.l"
+#line 120 "Lexical_Analyzer.l"
 {
     printf("TOKEN_ASSIGN\n");
 }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 123 "test.l"
+#line 123 "Lexical_Analyzer.l"
 {
     printf("TOKEN_LEFTPAREN\n");
 }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 126 "test.l"
+#line 126 "Lexical_Analyzer.l"
 {
     printf("TOKEN_RIGHTPAREN\n");
 }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 129 "test.l"
+#line 129 "Lexical_Analyzer.l"
 {
     printf("TOKEN_LEFTBRACKET\n");
 }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 132 "test.l"
+#line 132 "Lexical_Analyzer.l"
 {
     printf("TOKEN_RIGHTBRACKET\n");
 }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 135 "test.l"
+#line 135 "Lexical_Analyzer.l"
 {
     printf("TOKEN_LEFTB\n");
 }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 138 "test.l"
+#line 138 "Lexical_Analyzer.l"
 {
     printf("TOKEN_RIGHTB\n");
 }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 141 "test.l"
+#line 141 "Lexical_Analyzer.l"
 {
     printf("TOKEN_COMMA\n");
 }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 144 "test.l"
+#line 144 "Lexical_Analyzer.l"
 {
     printf("TOKEN_DOT\n");
 }
@@ -1113,14 +1113,14 @@ YY_RULE_SETUP
 case 43:
 /* rule 43 can match eol */
 YY_RULE_SETUP
-#line 147 "test.l"
+#line 147 "Lexical_Analyzer.l"
 {
 
 }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 155 "test.l"
+#line 155 "Lexical_Analyzer.l"
 ECHO;
 	YY_BREAK
 #line 1127 "lex.yy.c"
@@ -2128,7 +2128,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 155 "test.l"
+#line 155 "Lexical_Analyzer.l"
 
 
 int main(){
