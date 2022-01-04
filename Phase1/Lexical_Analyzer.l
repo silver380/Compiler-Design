@@ -63,7 +63,7 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
         fprintf(yyout,"TOKEN_MYSTERY\n");
     }
 }
-["]({LETTER})*["] {
+["].*["] {
     fprintf(yyout,"TOKEN_CHAR_CONST\n");
 }
 "#".* {
@@ -153,7 +153,6 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 . {
     fprintf(yyout,"TOKEN_MYSTERY\n");
 }
-
 
 
 

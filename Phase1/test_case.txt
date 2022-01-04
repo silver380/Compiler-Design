@@ -1,5 +1,6 @@
 int main(){
     int var = 9384.
+    char hello = "dkjflkjfdkj#04~".
     #I am a single line comment.
     #! And I am a
     Multi line Comment !#
