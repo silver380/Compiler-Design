@@ -1,11 +1,12 @@
-int main(){
+int main() {
     int var = 9384.
     char hello = "dkjflkjfdkj#04~".
     #I am a single line comment.
     #! And I am a
     Multi line Comment !#
-    if( var < 9){
+    if( var < 98989898){
         var = var - 9.
     }
+    ?
     return 0.
 }

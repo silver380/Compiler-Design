@@ -911,7 +911,7 @@ YY_RULE_SETUP
        fprintf(yyout,"TOKEN_INT_CONST\n");
     }
     else{
-        fprintf(yyout,"TOKEN_MYSTERY\n");
+        fprintf(yyout,"TOKEN_OUT_OF_RANGE\n");
     }
 }
 	YY_BREAK

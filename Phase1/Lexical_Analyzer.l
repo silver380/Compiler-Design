@@ -60,7 +60,7 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
        fprintf(yyout,"TOKEN_INT_CONST\n");
     }
     else{
-        fprintf(yyout,"TOKEN_MYSTERY\n");
+        fprintf(yyout,"TOKEN_OUT_OF_RANGE\n");
     }
 }
 ["].*["] {
