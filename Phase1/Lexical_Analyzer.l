@@ -54,10 +54,13 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 {ID}+ {
     fprintf(yyout,"TOKEN_IDENTIFIER\n");
 }
--{0,1}[1-9]{DIGIT}* {
+((-{0,1})[1-9]{DIGIT}*)|[0] {
     int num = atoi(yytext);
     if ( num <= 32767 && num >= -32768){
        fprintf(yyout,"TOKEN_INT_CONST\n");
+    }
+    else{
+        fprintf(yyout,"TOKEN_MISTRY\n");
     }
 }
 ["]({LETTER})*["] {
@@ -144,8 +147,11 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 "." {
     fprintf(yyout,"TOKEN_DOT\n");
 }
-.|{L} {
+" "|{L} {
 
+}
+. {
+    fprintf(yyout,"TOKEN_MISTRY\n");
 }
 
 

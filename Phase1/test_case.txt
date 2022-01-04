@@ -1,7 +1,4 @@
 int main(){
-    char a = "ali".
-    var n = 9.
-    #!kjflkjfkj
-    dkfjksj 0!#
+    int 9n = 999999999.
     return 0.
 }
