@@ -913,7 +913,7 @@ YY_RULE_SETUP
        fprintf(yyout,"TOKEN_INT_CONST\n");
     }
     else{
-        fprintf(yyout,"TOKEN_MISTRY\n");
+        fprintf(yyout,"TOKEN_MYSTERY\n");
     }
 }
 	YY_BREAK
@@ -1126,7 +1126,7 @@ case 44:
 YY_RULE_SETUP
 #line 153 "Lexical_Analyzer.l"
 {
-    fprintf(yyout,"TOKEN_MISTRY\n");
+    fprintf(yyout,"TOKEN_MYSTERY\n");
 }
 	YY_BREAK
 case 45:

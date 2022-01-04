@@ -60,7 +60,7 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
        fprintf(yyout,"TOKEN_INT_CONST\n");
     }
     else{
-        fprintf(yyout,"TOKEN_MISTRY\n");
+        fprintf(yyout,"TOKEN_MYSTERY\n");
     }
 }
 ["]({LETTER})*["] {
@@ -151,7 +151,7 @@ ID {LETTER}[{LETTER}|{DIGIT}|_]*
 
 }
 . {
-    fprintf(yyout,"TOKEN_MISTRY\n");
+    fprintf(yyout,"TOKEN_MYSTERY\n");
 }
 
 

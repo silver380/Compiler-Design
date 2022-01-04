@@ -1,4 +1,10 @@
 int main(){
-    int 9n = 999999999.
+    int var = 9384.
+    #I am a single line comment.
+    #! And I am a
+    Multi line Comment !#
+    if( var < 9){
+        var = var - 9.
+    }
     return 0.
 }
