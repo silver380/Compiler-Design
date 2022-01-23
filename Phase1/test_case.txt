@@ -1,12 +1,32 @@
-int main() {
-    int var = 9384.
-    char hello = "dkjflkjfdkj#04~".
-    #I am a single line comment.
-    #! And I am a
-    Multi line Comment !#
-    if( var < 98989898){
-        var = var - 9.
+void sum(num_1, num2, iter){
+    int _num.
+    int sum.
+    for(int i=0, i<=iter, i++ ){
+        sum = sum + num2 + num1.
     }
-    ?
-    return 0.
+    return sum.
 }
+
+void dif(num1, num2, iter){
+    int dif.
+    for(int i=0, i<=iter, i++ ){
+        dif = sum - num2 - num1.
+    }
+    return dif.
+}
+
+int main (){
+    int num1 = 9800
+    int _2sum.
+    char string = "this is test!".
+    int num2 = 77.
+    int iter = 1222.
+    int resSum.
+    int resDif.
+    if (num1 > num2){
+        int temp.
+        temp = num1.
+        num1 = num2.
+        num2 = temp.
+        resSum = sum(num1, num1, iter).
+        char _)) = "".

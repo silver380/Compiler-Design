@@ -11,7 +11,7 @@
 DIGIT    [0-9]
 LETTER   [a-zA-Z]
 L [\n]
-ID {LETTER}[{LETTER}|{DIGIT}|_]*
+ID ({LETTER}|_)({LETTER}|{DIGIT}|_)*
 
 
 %%
