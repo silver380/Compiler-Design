@@ -148,7 +148,7 @@ ID ({LETTER}|_)({LETTER}|{DIGIT}|_)*
 "." {
     return(DOT);
 }
-" "|{L} {
+" "|{L}|("\t") {
 
 }
 . {
