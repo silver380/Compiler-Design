@@ -109,8 +109,14 @@ ID ({LETTER}|_)({LETTER}|{DIGIT}|_)*
 "!" {
     return(NOT);
 }
+"++" {
+    return(TPLUS);
+}
 "+" {
     return(PLUS);
+}
+"--" {
+    return(TMINUS);
 }
 "-" {
     return(MINUS);

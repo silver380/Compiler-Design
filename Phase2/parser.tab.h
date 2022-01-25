@@ -92,7 +92,9 @@ extern int yydebug;
     MYSTERY = 298,
     CHAR_CONST = 299,
     LESS = 300,
-    GREATER = 301
+    GREATER = 301,
+    TPLUS = 302,
+    TMINUS = 303
   };
 #endif
 
